@@ -1,12 +1,13 @@
 package com.alipay;
 
-import cloud.agileframework.spring.util.ParamUtil;
+import com.zoloz.zprod.face.handler.FaceVerifyServerModeInitHandler;
+import com.zoloz.zprod.face.model.request.FaceInitRequest;
 
-import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        ParamUtil.getInParamOfFile(new HashMap<>(), "");
+        FaceVerifyServerModeInitHandler handler = new FaceVerifyServerModeInitHandler();
+        handler.initContext(new FaceInitRequest(null, null));
     }
 }

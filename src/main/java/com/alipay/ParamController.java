@@ -73,7 +73,7 @@ public class ParamController extends BaseApiController {
                 if (StringUtil.isNotBlank(result)) {
                     LoggerUtil.infoPrint(logger,
                             "NPM写入缓存，其组件名为 " + npmUpdateInfoRequest.getPackageName());
-                    JSONObject packageJson = JSON.parseObject(result, Feature.OrderedField);
+                    JSONObject packageJson = new JSONObject();
                     //性能考虑 转成简版npmDependencyDefine
                     NPMVersionHistory npmVersionHistory = MainStationNPMRegistryUtil.toNpmVersionHistory(
                             packageJson);
@@ -90,7 +90,8 @@ public class ParamController extends BaseApiController {
                 }
             }
         }
-        ParamUtil.getInParamOfFile(npmUpdateInfoRequest.getPackage(), npmUpdateInfoRequest.getVersion()).va;
+        ParamUtil.getInParamOfFiles(npmUpdateInfoRequest.getPackage(), npmUpdateInfoRequest.getVersion());
+        ParamUtil.getInParam(npmUpdateInfoRequest.getPackage(), npmUpdateInfoRequest.getVersion(),Object.class);
         // 返回结果
         baseOperationResult.setSuccess(true);
         baseOperationResult.setMessage("NPM update successful");

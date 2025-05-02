@@ -7,14 +7,14 @@
       <option name="url" value="http://mvn.test.alipay.net:8080/artifactory/repo" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="snapshots" />
-      <option name="name" value="snapshots" />
-      <option name="url" value="http://mvn.dev.alipay.net:8080/artifactory/repo" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="http://mvn.test.alipay.net/artifactory/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="snapshots" />
+      <option name="url" value="http://mvn.dev.alipay.net:8080/artifactory/repo" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="alipay_test" />
